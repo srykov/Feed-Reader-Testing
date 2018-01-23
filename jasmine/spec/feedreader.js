@@ -107,17 +107,25 @@ $(function() {
 
         beforeEach(function(done){
             //load the first feed, and grab the title of the first entry
-            loadFeed(1,function(){
+            loadFeed(0,function(){
                 const feedContainer = $('.feed');
                 const entries = feedContainer.children('.entry-link');
                 firstEntries[0] = entries[0].innerText;
             });
 
             //load the second feed, and grab the title of the first entry
-            loadFeed(0, function(){
+            loadFeed(1, function(){
                 const feedContainer = $('.feed');
                 const entries = feedContainer.children('.entry-link');
                 firstEntries[1] = entries[0].innerText;
+                done();
+            });
+
+        });
+
+        afterEach(function(done){
+            //load the first feed, and grab the title of the first entry
+            loadFeed(0,function(){
                 done();
             });
 
