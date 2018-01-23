@@ -103,7 +103,7 @@ $(function() {
     /* Test suite named "New Feed Selection" */
     describe('New Feed Selection', function(){
 
-        let firstEntries = [];
+        const firstEntries = [];
 
         beforeEach(function(done){
             //load the first feed, and grab the title of the first entry
