@@ -29,8 +29,7 @@ $(function() {
          */
          it('urls are not empty', function() {
             allFeeds.forEach(function(element){
-                expect(element.url).toBeDefined();
-                expect(element.url.length).not.toBe(0);
+                expect(element.name).toBeTruthy();
             });
          });
 
@@ -41,8 +40,7 @@ $(function() {
          */
           it('names are not empty', function() {
             allFeeds.forEach(function(element){
-                expect(element.name).toBeDefined();
-                expect(element.name.length).not.toBe(0);
+                expect(element.name).toBeTruthy();
             });
          });
     });
