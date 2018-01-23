@@ -92,7 +92,7 @@ $(function() {
          */
         it('contains at least a single entry', function(done) {
             const feedContainer = $('.feed');
-            const entries = feedContainer.children('.entry-link');
+            const entries = feedContainer.find('.entry');
             expect(entries.length).toBeGreaterThan(0);
             done();
         });
@@ -103,22 +103,21 @@ $(function() {
 
         const firstEntries = [];
 
+        function getFirstEntryForFeed(feedContainer){
+            const entries = feedContainer.find('.entry');
+            return entries[0].innerText;
+        }
+
         beforeEach(function(done){
             //load the first feed, and grab the title of the first entry
             loadFeed(0,function(){
-                const feedContainer = $('.feed');
-                const entries = feedContainer.children('.entry-link');
-                firstEntries[0] = entries[0].innerText;
+                firstEntries[0] = getFirstEntryForFeed($('.feed'));
+                //load the second feed, and grab the title of the first entry
+                loadFeed(1, function(){
+                    firstEntries[1] = getFirstEntryForFeed($('.feed'));
+                    done();
+                });
             });
-
-            //load the second feed, and grab the title of the first entry
-            loadFeed(1, function(){
-                const feedContainer = $('.feed');
-                const entries = feedContainer.children('.entry-link');
-                firstEntries[1] = entries[0].innerText;
-                done();
-            });
-
         });
 
         afterEach(function(done){
