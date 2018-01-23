@@ -13,6 +13,7 @@ $(function() {
     * feeds definitions, the allFeeds variable in our application.
     */
     describe('RSS Feeds', function() {
+
         /* Tests to make sure that the
          * allFeeds variable has been defined and that it is not
          * empty.
@@ -29,7 +30,18 @@ $(function() {
          */
          it('urls are not empty', function() {
             allFeeds.forEach(function(element){
-                expect(element.name).toBeTruthy();
+                expect(element.url).toBeTruthy();
+            });
+         });
+
+        /* Test that loops through each feed
+         * in the allFeeds object and ensures it has a valid
+         * URL defined.
+         *
+         */
+         it('urls are valid', function() {
+            allFeeds.forEach(function(element){
+                expect(element.url).toMatch(re_weburl);
             });
          });
 
