@@ -127,9 +127,6 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          */
         it('causes content to change', function(done) {
-
-            console.log("Entry One: " + firstEntries[0]);
-            console.log("Entry Two: " + firstEntries[1]);
             expect(firstEntries[0]).not.toEqual(firstEntries[1]);
             done();
         });
