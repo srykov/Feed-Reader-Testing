@@ -1,6 +1,5 @@
-# Project Overview
-
-In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
+# Feed Reader Testing Project
+This was a project that I developed as part of my Udacity [Front-End Web Developer Nanodegree Program](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001). This project required me to build a suite tests for a web-based application that reads RSS feeds. Udacity provided the HTML, CSS and Javascript for the feed reader application. I wrote the test suite using [Jasmine](https://jasmine.github.io/edge/introduction.html).
 
 
 ## Why this Project?
@@ -44,5 +43,5 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 17. No test should be dependent on the results of another.
 18. Callbacks should be used to ensure that feeds are loaded before they are tested.
 19. Implement error handling for undefined variables and out-of-bound array access.
-20. When complete - all of your tests should pass. 
+20. When complete - all of your tests should pass.
 21. Write a README file detailing all steps required to successfully run the application. If you have added additional tests (for Udacious Test Coverage),  provide documentation for what these future features are and what the tests are checking for.
